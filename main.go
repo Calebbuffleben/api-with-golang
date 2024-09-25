@@ -2,6 +2,6 @@ package main
 
 import "github.com/Calebbuffleben/api-with-golang/router"
 
-func main(){
+func main() {
 	router.Initialize()
 }

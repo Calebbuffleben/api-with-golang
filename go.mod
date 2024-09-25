@@ -1,4 +1,4 @@
-module github.com/Calebbuffleben/api-with-golang.git
+module github.com/Calebbuffleben/api-with-golang
 
 go 1.23.1
 
