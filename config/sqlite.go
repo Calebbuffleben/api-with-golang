@@ -8,8 +8,10 @@ import (
 
 func InitializeSQLite() (*gorm.DB, error){
 	logger := GetLogger("sqlite")
+	dbPath := "./db/main.db"
+	_, err := os.Stat(dbPath)
 
-	db, err := gorm.Open(sqlite.Open("./db/openings.db"), &gorm.Config{})
+	db, err := gorm.Open(sqlite.Open(dbPath), &gorm.Config{})
 
 	if err != nil {
 		logger.Errorf("sqlite opening error: %v", err)
@@ -22,5 +24,6 @@ func InitializeSQLite() (*gorm.DB, error){
 		return nil, err
 	}
 
+	//Return de DB
 	return db, nil
 }
