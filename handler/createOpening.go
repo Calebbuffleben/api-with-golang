@@ -1,7 +1,6 @@
 package handler
 
-import (
-	"net/http"             
+import (        
 	"github.com/gin-gonic/gin"
 )
 
@@ -9,4 +8,6 @@ func CreateOpeningHandler(ctx *gin.Context) {
 	request := struct{
 		role string
 	} {}
+
+	ctx.BindJSON(&request)
 }
