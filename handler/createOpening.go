@@ -10,4 +10,6 @@ func CreateOpeningHandler(ctx *gin.Context) {
 	} {}
 
 	ctx.BindJSON(&request)
+
+	logger.Infof("request received: %+v", request)
 }
